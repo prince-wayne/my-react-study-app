@@ -1,0 +1,29 @@
+.card {
+    display: inline-flex;
+    flex-direction: column;
+    position: relative;
+
+    padding: 10px;
+    margin: 10px;
+
+    width: 250px;
+    height: 450px;
+    
+    border-radius: 8px;
+    box-shadow: 0px 0px 4px 8px hsla(200, 48%, 60%, 0.3);
+
+}
+
+.card img {
+    border-radius: 8px;
+}
+
+.card a {
+    position: absolute;
+    text-align: center;
+    bottom: 10%;
+    left: 35%;
+    width: 30%;
+}
+
+
