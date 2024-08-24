@@ -12,10 +12,10 @@ function Teams(props) {
   ));
 
   return (
-    <div className="team-container">
-      {/* {mapEx} */}
-      {rTeams}
-    </div>
+    <>
+      <h2>Brought to you by</h2>
+      <div className="team-container">{rTeams}</div>
+    </>
   );
 }
 
@@ -41,7 +41,7 @@ Teams.defaultProps = {
       name: "Product Managers",
       members: ["Victor", "Walter", "Xena", "Yasmine"],
     },
-  ]
+  ],
 };
 
 export default Teams;

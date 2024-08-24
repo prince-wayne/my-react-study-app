@@ -16,11 +16,12 @@ body {
   text-align: center;
 }
 
-.spacer {
-  padding: var(--spcaer);
-}
-
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+.spacer {
+  padding: var(--spcaer);
+}
+

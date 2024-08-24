@@ -13,7 +13,7 @@
 
 }
 .team h3 {
-
+    color: hsl(258, 100%, 50%);
 }
 .team ul {
     padding-inline-start: 0;

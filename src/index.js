@@ -1,11 +1,16 @@
-import React from 'react';
+import React, { Suspense, lazy } from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 
-import Welcome from './Welcome';
-import CardSection from './Cards/Card section';
-import Teams from './Team/Team container.jsx';
+// Eagerly loaded components (critical for initial render)
+import Welcome from './Headers/Welcome.jsx';
+
+// Lazy loaded components (non-critical or below-the-fold content)
+const CardSection = lazy(() => import('./Cards/Card section'));
+const Teams = lazy(() => import('./Team/Team container.jsx'));
+const ContactBtn = lazy(() => import('./btns/CTA-Contact.jsx'));
+const Counter = lazy(() => import('./btns/Counter.jsx'));
 
 const teams = [
   {
@@ -23,28 +28,35 @@ const teams = [
 ]
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render( 
-<React.StrictMode >
-  <div className = 'spacer'/>
-  <Welcome name = "Oj Spiceman"/> 
-  <div className='spacer'/>
+root.render(
+  <React.StrictMode>
+    <div className='spacer'/>
+    <Welcome name="Oj Spiceman"/>
+    <div className='spacer'/>
+    
+    <Suspense fallback={<div>Loading Cards...</div>}>
+      <div className='spacer'/>
+      <CardSection/>
+    </Suspense>
 
-  <div className = 'spacer'/>
-  <CardSection/>
+    <Suspense fallback={<div>Loading Teams...</div>}>
+      <div className='spacer'/>
+      <Teams/>
+    </Suspense>
 
-  <div className = 'spacer'/> 
-  <Teams/>
+    <Suspense fallback={<div>Loading Contact Button...</div>}>
+      <div className='spacer'/>
+      <h2> I'd love to speak with you </h2>
+      <ContactBtn/>
+    </Suspense>
 
-  <div className= 'spacer'/>
-  <Teams teams = {teams}/>
+    <Suspense fallback={<div>Loading Counter...</div>}>
+      <div className='spacer'/>
+      <Counter/>
+    </Suspense>
 
-  <div className = 'spacer'/> 
-  
-
+    <div className='spacer'/>
   </React.StrictMode>
 );
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
 reportWebVitals(console.log);
