@@ -7,19 +7,39 @@ import Welcome from './Welcome';
 import CardSection from './Cards/Card section';
 import Teams from './Team/Team container.jsx';
 
+const teams = [
+  {
+    name: "Team 1",
+    members: ["Mello", "Bj", "Mari"]
+  },
+  {
+    name: "Team 2",
+    members: ["Bill", "Charles", "Wayne"]
+  },
+  {
+    name: "Team 3",
+    members: ["Daniel", "Meena", "Tindle"]
+  }
+]
+
 const root = ReactDOM.createRoot(document.getElementById('root'));
-root.render(
-  <React.StrictMode>
-    <div className='spacer'/> {/* tbh this was simply to seperate them faster */}
-    <Welcome name = "Oj Spiceman"/> {/* if we remove the name it will say guest */}
+root.render( 
+<React.StrictMode >
+  <div className = 'spacer'/>
+  <Welcome name = "Oj Spiceman"/> 
+  <div className='spacer'/>
 
-    <div className='spacer'/> {/* tbh this was simply to seperate them faster */}
-    <CardSection/>
+  <div className = 'spacer'/>
+  <CardSection/>
 
-    <div className='spacer'/> {/* tbh this was simply to seperate them faster */}
-    <Teams/> 
+  <div className = 'spacer'/> 
+  <Teams/>
 
-    <div className='spacer'/> {/* tbh this was simply to seperate them faster */}
+  <div className= 'spacer'/>
+  <Teams teams = {teams}/>
+
+  <div className = 'spacer'/> 
+  
 
   </React.StrictMode>
 );
