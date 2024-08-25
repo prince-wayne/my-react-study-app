@@ -7,9 +7,22 @@ function Dropdown(props) {
   // saves the original array
   const options = props.options;
 
+  const handleOptionSelect = (event) => {
+    // Update input field with selected option and close dropdown
+    const dropdownInput = document.getElementById("dropdown-input");
+    const dropdownList = document.getElementById("dropdown-list");
+
+    dropdownInput.value = event.target.innerText;
+    dropdownList.style.display = "none";
+  };
+
   // useState to manage search query and filtered options
   const [items, setItems] = useState(
-    options.map((value, index) => <li key={index}> {value}</li>)
+    options.map((value, index) => (
+      <li key={index} onClick={handleOptionSelect}>
+        {value}
+      </li>
+    ))
   );
 
   const handleInputChange = (event) => {
@@ -20,28 +33,36 @@ function Dropdown(props) {
     function filterItems() {
       return options
         .filter((el) => el.toLowerCase().includes(query.toLowerCase()))
-        .map((value, index) => <li key={index}> {value} </li>);
+        .map((value, index) => (
+          <li key={index} onClick={handleOptionSelect}>
+            {" "}
+            {value}{" "}
+          </li>
+        ));
     }
     // set the state of the array to the updated version
     setItems(filterItems());
   };
 
-  const handleOptionSelect = (option) => {
-    // Update input field with selected option and close dropdown
-  };
+  function handleFocus() {
+    const dropdownList = document.getElementById("dropdown-list");
+    dropdownList.style.display = "block";
+  }
 
+ 
+  
   return (
-    <div>
+    <div className="dropdown">
       <input
+        id="dropdown-input"
         type="text"
         placeholder="Search..."
         // onChange to update the search query
         onChange={handleInputChange}
+        onFocus={handleFocus}
       />
-      <ul id="dropdown-list">
-        {/* Map over filtered options and display as list items */}
+      <ul id="dropdown-list" style = {{display:'none'}}>
         {items}
-        {/* onClick on each item to select the option */}
       </ul>
     </div>
   );
