@@ -2,8 +2,8 @@ import "./Team.css";
 
 
 function Team(props) {
-  const Members = props.members.map((element) => (
-    <li /* key = {props.members.indexOf(element)} */> {element} </li>
+  const Members = props.members.map((element, index) => (
+    <li key = {index}> {element} </li>
   ));
   return (
     <div className="team">

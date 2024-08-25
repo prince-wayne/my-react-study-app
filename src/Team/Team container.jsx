@@ -7,8 +7,8 @@ function Teams(props) {
 
   const teams = props.teams;
 
-  const rTeams = teams.map((obj) => (
-    <Team name={obj.name} members={obj.members} />
+  const rTeams = teams.map((obj, index) => (
+    <Team key = {index} name={obj.name} members={obj.members} />
   ));
 
   return (

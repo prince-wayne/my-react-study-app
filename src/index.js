@@ -5,6 +5,7 @@ import reportWebVitals from './reportWebVitals';
 
 // Eagerly loaded components (critical for initial render)
 import Welcome from './Headers/Welcome.jsx';
+import Dropdown from './dropdown list/Dropdown.jsx';
 
 // Lazy loaded components (non-critical or below-the-fold content)
 const CardSection = lazy(() => import('./Cards/Card section'));
@@ -25,7 +26,15 @@ const teams = [
     name: "Team 3",
     members: ["Daniel", "Meena", "Tindle"]
   }
-]
+];
+
+const options = [
+  "Team Alpha",
+  "Team Bravo",
+  "Team Charlie",
+  "Team Delta",
+  "Team Echo"
+];
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -53,6 +62,11 @@ root.render(
     <Suspense fallback={<div>Loading Counter...</div>}>
       <div className='spacer'/>
       <Counter/>
+    </Suspense>
+    
+    <Suspense fallback={<div>Loading Dropdown...</div>}>
+      <div className='spacer'/>
+      <Dropdown options = {options}/>
     </Suspense>
 
     <div className='spacer'/>
