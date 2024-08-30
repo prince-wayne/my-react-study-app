@@ -12,7 +12,10 @@ const CardSection = lazy(() => import('./Cards/Card section'));
 const Teams = lazy(() => import('./Team/Team container.jsx'));
 const ContactBtn = lazy(() => import('./btns/CTA-Contact.jsx'));
 const Counter = lazy(() => import('./btns/Counter.jsx'));
+const Tasks = lazy(() => import('./btns/Tasks/Tasks.jsx'))
 
+
+// this isn't used because we like our defaults more.
 const teams = [
   {
     name: "Team 1",
@@ -43,6 +46,7 @@ root.render(
     <Welcome name="Oj Spiceman"/>
     <div className='spacer'/>
     
+    
     <Suspense fallback={<div>Loading Cards...</div>}>
       <div className='spacer'/>
       <CardSection/>
@@ -55,7 +59,7 @@ root.render(
 
     <Suspense fallback={<div>Loading Contact Button...</div>}>
       <div className='spacer'/>
-      <h2> I'd love to speak with you </h2>
+      <h2> I'd love to speak with you. </h2>
       <ContactBtn/>
     </Suspense>
 
@@ -66,10 +70,19 @@ root.render(
     
     <Suspense fallback={<div>Loading Dropdown...</div>}>
       <div className='spacer'/>
+      <h2> Chose your team.</h2>
       <Dropdown options = {options}/>
+    </Suspense>
+    
+    <Suspense fallback={<div>Loading Dropdown...</div>}>
+      <div className='spacer'/>
+      <h2> Section under construction. </h2>
+      <Tasks/>
     </Suspense>
 
     <div className='spacer'/>
+    
+
   </React.StrictMode>
 );
 

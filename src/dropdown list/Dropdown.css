@@ -1,23 +1,20 @@
 .dropdown {
     height: max-content;
     padding: 10px;
-
-    box-shadow: 0px 0px 2px 4px hsla(200, 48%, 60%, 0.1);
     border-radius: 8px;
+
 }
 
-input, ul li {
+.dropdown input, .dropdown ul li {
     box-shadow: 0px 0px 4px 8px hsla(200, 48%, 60%, 0.3);
     color: hsl(258, 100%, 50%);
     border: none;
     border-radius: 8px;
     padding: 8px 16px;
-    margin: 10px 5px;
+    margin: 10px;
+    display: inline-block;
+    text-align: center;
 }
-
-input:active, input:focus {
-    box-shadow: 0px 0px 4px 8px hsla(200, 48%, 60%, 0.3); /* Or specify a different shadow without the inset */
-  }
 
 ul {
     padding-inline-start: 0;
