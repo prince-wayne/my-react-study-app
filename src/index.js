@@ -12,7 +12,8 @@ const CardSection = lazy(() => import('./Cards/Card section'));
 const Teams = lazy(() => import('./Team/Team container.jsx'));
 const ContactBtn = lazy(() => import('./btns/CTA-Contact.jsx'));
 const Counter = lazy(() => import('./btns/Counter.jsx'));
-const Tasks = lazy(() => import('./btns/Tasks/Tasks.jsx'))
+const Tasks = lazy(() => import('./Tasks/Tasks.jsx'));
+const TasksV2 = lazy(() => import('./Tasks/TasksV2.jsx'));
 
 
 // this isn't used because we like our defaults more.
@@ -76,14 +77,18 @@ root.render(
     
     <Suspense fallback={<div>Loading Dropdown...</div>}>
       <div className='spacer'/>
-      <h2> Section under construction. </h2>
+      <h2> Updating an Array in State </h2>
       <Tasks/>
+    </Suspense>
+    
+    <Suspense fallback={<div>Loading Dropdown...</div>}>
+      <div className='spacer'/>
+      <h2> Updating an Array of Objects in State </h2>
+      <TasksV2/>
     </Suspense>
 
     <div className='spacer'/>
-    
-
   </React.StrictMode>
 );
 
-reportWebVitals(console.log);
+// reportWebVitals(console.log);
