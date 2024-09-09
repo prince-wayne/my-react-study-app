@@ -4,6 +4,8 @@
 
 This project serves as a hands-on exploration into the world of React, designed to deepen my understanding of component-based architecture and state management. Through building this app, I'm honing essential skills like handling props, managing state, and implementing error boundaries. Each feature is crafted with the goal of solidifying concepts in real-world scenarios, allowing me to transform theory into practice. As I progress, this project will evolve, reflecting my growing proficiency in React and front-end development as a whole.
 
+I would also like to add that in no way am i focused on styles as im only here to learn react and node.js. however, there might be times when i chose to style a compondent.
+
 **Project Goal**
 
 I wish to learn `React` and `Node.js` to increase my value as a developer. 

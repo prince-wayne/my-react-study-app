@@ -1,0 +1,34 @@
+.poke-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+
+
+.action-img:hover {
+    cursor: pointer;
+}
+.action-img {    
+    margin : 20px;
+}
+
+.card.poke-card {
+    position: relative;
+}
+
+.card.poke-card .list {
+    position: absolute;
+    display: inline-flex;
+    justify-content: center;
+    gap: 10px;
+    width: 50%;
+    left: 25%;
+    bottom: 5%;
+}
+
+.card.poke-card .list-item {
+    /* display: inline; */
+    
+}

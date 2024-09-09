@@ -1,0 +1,132 @@
+[
+  {
+    "generation": 1,
+    "starters": [
+      {
+        "img": "Images/Pokemon/Generation 1/Bulbasaur.png",
+        "name": "Bulbasaur",
+        "types": ["Grass", "Poison"],
+        "pokedexNumber": 1,
+        "description": "Bulbasaur can be seen napping in bright sunlight. There is a seed on its back. By soaking up the sun's rays, the seed grows progressively larger."
+      },
+      {
+        "name": "Charmander",
+        "img": "Images/Pokemon/Generation 1/Charmander.png",
+        "types": ["Fire"],
+        "pokedexNumber": 4,
+        "description": "The flame that burns at the tip of its tail is an indication of its emotions. It is said that Charmander's flame burns brighter if it is in good health."
+      },
+      {
+        "name": "Squirtle",
+        "img": "Images/Pokemon/Generation 1/Squirtle.png",
+        "types": ["Water"],
+        "pokedexNumber": 7,
+        "description": "Squirtle's shell is not just for protection. Its rounded shape and the grooves on its surface help minimize resistance in water, enabling this Pokémon to swim at high speeds."
+      }
+    ]
+  },
+    {
+      "generation": 2,
+      "starters": [
+        {
+          "name": "Chikorita",
+          "img": "Images/Pokemon/Generation 2/152.png",
+          "types": ["Grass"],
+          "pokedexNumber": 152,
+          "description": "Chikorita emits a sweet fragrance from the leaf on its head that has calming effects. It's known to gently sway its leaf to create a relaxing environment."
+        },
+        {
+          "name": "Cyndaquil",
+          "img": "Images/Pokemon/Generation 2/155.png",
+          "types": ["Fire"],
+          "pokedexNumber": 155,
+          "description": "Cyndaquil is a timid Pokémon that protects itself by flaring up the flames on its back. It can create intense fire when it feels threatened."
+        },
+        {
+          "name": "Totodile",
+          "img": "Images/Pokemon/Generation 2/158.png",
+          "types": ["Water"],
+          "pokedexNumber": 158,
+          "description": "Despite its small size, Totodile's powerful jaws are capable of crushing anything. It sometimes forgets its strength and accidentally bites down too hard."
+        }
+      ]
+    },
+    {
+      "generation": 3,
+      "starters": [
+        {
+          "name": "Treecko",
+          "img": "Images/Pokemon/Generation 3/252.png",
+          "types": ["Grass"],
+          "pokedexNumber": 252,
+          "description": "Treecko has small hooks on the bottom of its feet that enable it to scale vertical walls. It attacks by slamming foes with its thick tail."
+        },
+        {
+          "name": "Torchic",
+          "img": "Images/Pokemon/Generation 3/255.png",
+          "types": ["Fire"],
+          "pokedexNumber": 255,
+          "description": "Torchic sticks with its Trainer, following behind with unsteady steps. It breathes fire of over 1,800 degrees Fahrenheit, occasionally causing it to scorch itself."
+        },
+        {
+          "name": "Mudkip",
+          "img": "Images/Pokemon/Generation 3/258.png",
+          "types": ["Water"],
+          "pokedexNumber": 258,
+          "description": "The fin on Mudkip's head acts as a highly sensitive radar. Using this fin to sense movements of water and air, Mudkip can determine what's happening around it without using its eyes."
+        }
+      ]
+    },
+    {
+      "generation": 4,
+      "starters": [
+        {
+          "name": "Turtwig",
+          "img": "Images/Pokemon/Generation 4/387.png",
+          "types": ["Grass"],
+          "pokedexNumber": 387,
+          "description": "Photosynthesis occurs across Turtwig's body as it basks in the sunlight. If it becomes thirsty, the leaf on its head wilts."
+        },
+        {
+          "name": "Chimchar",
+          "img": "Images/Pokemon/Generation 4/390.png",
+          "types": ["Fire"],
+          "pokedexNumber": 390,
+          "description": "Chimchar's fiery rear end is fueled by gas made in its belly. Even rain can't extinguish the fire, which burns brighter when Chimchar is agitated."
+        },  
+        {
+          "name": "Piplup",
+          "img": "Images/Pokemon/Generation 4/393.png",
+          "types": ["Water"],
+          "pokedexNumber": 393,
+          "description": "Piplup has a layer of fine down covering its body, providing protection against the cold. It is a poor walker and often falls down, but it is a proud Pokémon."
+        }
+      ]
+    },
+    {
+      "generation": 5,
+      "starters": [
+        {
+          "name": "Snivy",
+          "img": "Images/Pokemon/Generation 5/495.png",
+          "types": ["Grass"],
+          "pokedexNumber": 495,
+          "description": "Snivy is a calm and intelligent Pokémon. When it raises its tail upright, it can perform photosynthesis. By using sunlight, it can recover energy faster."
+        },
+        {
+          "name": "Tepig",
+          "img": "Images/Pokemon/Generation 5/498.png",
+          "types": ["Fire"],
+          "pokedexNumber": 498,
+          "description": "Tepig blows fire from its nose. When it's not feeling well, it lets out smoke instead. It is a warm and friendly Pokémon that enjoys eating."
+        },
+        {
+          "name": "Oshawott",
+          "img": "Images/Pokemon/Generation 5/501.png",
+          "types": ["Water"],
+          "pokedexNumber": 501,
+          "description": "Oshawott uses the shell on its belly as a weapon in battle. It is known for being brave and has no qualms about taking on powerful opponents."
+        }
+      ]
+    }
+  ]

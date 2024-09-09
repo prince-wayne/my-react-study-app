@@ -14,9 +14,9 @@ const ContactBtn = lazy(() => import('./btns/CTA-Contact.jsx'));
 const Counter = lazy(() => import('./btns/Counter.jsx'));
 const Tasks = lazy(() => import('./Tasks/Tasks.jsx'));
 const TasksV2 = lazy(() => import('./Tasks/TasksV2.jsx'));
+const StarterPokemon = lazy(() => import('./Pokedex/Starter veiw.jsx'));
 
-
-// this isn't used because we like our defaults more.
+// this wasn't used because we like our defaults more.
 const teams = [
   {
     name: "Team 1",
@@ -39,10 +39,16 @@ const options = [
   "Team Delta",
   "Team Echo"
 ];
+function addCompondent(component) {
+  <Suspense fallback={component.name}>
+      <div className='spacer'/>
+      {component.body}
+    </Suspense>
+}
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <React.StrictMode>
+  <>
     <div className='spacer'/>
     <Welcome name="Oj Spiceman"/>
     <div className='spacer'/>
@@ -75,20 +81,32 @@ root.render(
       <Dropdown options = {options}/>
     </Suspense>
     
-    <Suspense fallback={<div>Loading Dropdown...</div>}>
+    <Suspense fallback={<div>Loading Manager...</div>}>
       <div className='spacer'/>
       <h2> Updating an Array in State </h2>
       <Tasks/>
     </Suspense>
     
-    <Suspense fallback={<div>Loading Dropdown...</div>}>
+    <Suspense fallback={<div>Loading Manager 2.0...</div>}>
       <div className='spacer'/>
       <h2> Updating an Array of Objects in State </h2>
       <TasksV2/>
     </Suspense>
+    
+    <Suspense fallback={<div>Loading Pokemon...</div>}>
+      <div className='spacer'/>
+      <h2> {`UseEffect(), useRef()`}  </h2> {/* i just didn't want the () to cause an escape. */}
+      <StarterPokemon/>
+    </Suspense>
+
+    <Suspense fallback={null}>
+      <div className='spacer'/>
+      
+    </Suspense>
+
 
     <div className='spacer'/>
-  </React.StrictMode>
+    </>
 );
 
 // reportWebVitals(console.log);
